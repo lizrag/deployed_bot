@@ -4,9 +4,7 @@ import os
 from flask import Flask
 from slackeventsapi import SlackEventAdapter
 
-app = Flask(__name__)
-
-
+#app = Flask(__name__)
 
 api = requests.get("https://www.el-tiempo.net/api/json/v2/home")
 json_data = json.loads(api.content)
@@ -31,7 +29,7 @@ tiempo = tiempoCiudades("Barcelona")
 
 
 
-url = "https://hooks.slack.com/services/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"
+url = "https://hooks.slack.com/services/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"
 result = requests.post(url, json={"text": tiempo})
 if(result.text == "ok"):
         print("el mensaje ha sido enviado")
