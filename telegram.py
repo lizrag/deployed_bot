@@ -28,7 +28,7 @@ def echo_message(message):
 
 
 # Enviar el mensaje a Slack
-    url = "https://hooks.slack.com/services/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"
+    url = "https://hooks.slack.com/services/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"
     result = requests.post(url, json={"text": text})
     if(result.text == "ok"):
         print("el mensaje ha sido enviado")
